@@ -53,11 +53,15 @@ jobs:
       matrix:
         test-name:
           - 'jdk/tier1'
+          - 'jdk/tier2'
           - 'langtools'
 
         include:
           - test-name: 'jdk/tier1'
             test-suite: 'jdk_tier1'
+
+          - test-name: 'jdk/tier2'
+            test-suite: 'jdk_tier2'
 
           - test-name: 'langtools'
             test-suite: 'langtools'

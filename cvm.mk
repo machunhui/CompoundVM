@@ -356,6 +356,10 @@ test_jtreg8_jdk_tier1: -setup_jtreg8 -overlay-jdk8
 	$(eval JT_TEST = ":jdk_tier1")
 	$(call run_jtreg8_test,$(JDK8_SRCROOT)/jdk/test,$(JT_TEST),$(JT_OPTS_EXCLUDE))
 
+test_jtreg8_jdk_tier2: -setup_jtreg8 -overlay-jdk8
+	$(eval JT_TEST = ":jdk_tier2")
+	$(call run_jtreg8_test,$(JDK8_SRCROOT)/jdk/test,$(JT_TEST),$(JT_OPTS_EXCLUDE))
+
 test_jtreg8_jdk_core: -setup_jtreg8 -overlay-jdk8
 	$(eval JT_TEST = ":jdk_core")
 	$(call run_jtreg8_test,$(JDK8_SRCROOT)/jdk/test,$(JT_TEST),$(JT_OPTS_EXCLUDE))
