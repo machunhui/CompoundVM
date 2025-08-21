@@ -1620,7 +1620,8 @@ void ClassLoader::create_javabase() {
       if (jb_module == NULL) {
         vm_exit_during_initialization("Unable to create ModuleEntry for " JAVA_BASE_NAME);
       }
-      ModuleEntryTable::set_javabase_moduleEntry(jb_module);
+//      ModuleEntryTable::set_javabase_moduleEntry(jb_module);
+      ModuleEntryTable::set_javabase_moduleEntry(null_cld->unnamed_module());
     }
   }
 }
